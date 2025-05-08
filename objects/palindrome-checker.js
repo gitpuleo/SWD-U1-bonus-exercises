@@ -8,7 +8,7 @@ let words = ["moon", "mom", "tacocat", "adobo", "agog", "kayak", "bikini", "bana
 
 
 
-
+//Testing methods 
 //let x = "sand"; 
 //console.log(x.split('').reverse().join(''));
 

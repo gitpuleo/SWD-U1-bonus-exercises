@@ -88,11 +88,53 @@ for (let restaurant of restaurants) {
 
 // TODO: create objects and put them in an array
 
+let cherokee2720 = {
+	name: "2720 Cherokee",
+	location: "South City",
+	adultTicketPrice: 20,
+	childTicketPrice: 10,
+	famousFeature: ["Raves", "Arcades", "Mysterious Basement"]
+};
+
+let oldRockHouse = {
+	name: "Old Rock House",
+	location: "Riverfront",
+	adulticketPrice: 25,
+	childTicketPrice: 15, 
+	famousFeature: ["Historic architecture", "Jazz", "EDM"]
+};
+
+let venueArray = [cherokee2720, oldRockHouse];
+
+
 /*
 	Loop through the array, then within that for loop, use a for...in loop to grab values from each key and print them to the console. If you come across a key storing an array, print each element in the array instead of the array itself. Remember that you need a new index variable with each nested FOR loop (i, j are common).
 
 	NOTE: This is a tough one to think through when you're new at this. If you get completely stuck, reference the solution that accompanies this starter code. But make an effort to figure it out yourself first!
 */
+
+/*for (i=0; i<venueArray.length; i++) {
+	for (let key in venueArray) {
+		if (Array.isArray(venueArray[key])) {
+			for (j=0;j<key.length;j++) {
+				console.log(key[j]);
+		}
+		} else
+		console.log(venueArray[key])
+};
+*/
+for (i=0; i<venueArray.length; i++) {
+	for (let key in venueArray[i]) {
+		if (Array.isArray(venueArray[i][key])) {
+			for (j=0; j<venueArray[i][key].length; j++) {
+				console.log(venueArray[i][key][j]);
+		} 
+		} else {console.log(key);
+	}
+}
+};
+
+//This was very difficult and I had to look stuff up in the end, but learning that as many indexes can be added on to access as many layers of nested data as there are was a great moment of learning--something about accessing data has clicked. 
 
 // TODO: use nested loops to print values inside objects
 
